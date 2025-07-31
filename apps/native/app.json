@@ -1,0 +1,40 @@
+{
+	"expo": {
+		"name": "Ryde",
+		"slug": "ryde",
+		"version": "1.0.0",
+		"scheme": "ryde",
+		"plugins": ["expo-router", "expo-web-browser"],
+		"experiments": {
+			"typedRoutes": true,
+			"tsconfigPaths": true
+		},
+		"orientation": "portrait",
+		"icon": "./assets/images/icon.png",
+		"userInterfaceStyle": "light",
+		"splash": {
+			"image": "./assets/images/splash.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#ffffff"
+		},
+		"assetBundlePatterns": ["**/*"],
+		"ios": {
+			"supportsTablet": true,
+			"bundleIdentifier": "com.d0ts.ryde"
+		},
+		"android": {
+			"package": "com.d0ts.ryde",
+			"adaptiveIcon": {
+				"foregroundImage": "./assets/images/adaptive-icon.png",
+				"backgroundColor": "#ffffff"
+			}
+		},
+		"extra": {
+			"router": {},
+			"eas": {
+				"projectId": "2f21ac1e-1af1-47a9-8dce-0eaddd2cf6ff"
+			}
+		},
+		"owner": "dorra04"
+	}
+}
