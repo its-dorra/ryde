@@ -12,13 +12,18 @@ export default function GoogleButton() {
 		const { error } = await authClient.signIn.social({
 			provider: "google",
 			callbackURL: "/",
+			fetchOptions: {
+				onError: (error) => {
+					Alert.alert("Error occured", JSON.stringify(error, null, 2));
+				},
+			}
 		});
 		setDisabled(false);
 
-		if (error) {
-			console.log(error);
-			Alert.alert("Error occurred", JSON.stringify(error, null, 3));
-		}
+		// if (error) {
+		// 	console.log(error);
+		// 	Alert.alert("Error occurred", JSON.stringify(error, null, 3));
+		// }
 	};
 
 	return (

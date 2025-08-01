@@ -40,4 +40,11 @@ export const auth = betterAuth({
 		},
 	},
 	plugins: [expo()],
+	logger: {
+		disabled : false,
+		level: 'error',
+		log: (level , message) => {
+			console.log(message , `level : ${level}`);
+		}
+	}
 });

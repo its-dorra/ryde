@@ -14,7 +14,7 @@ export const queryClient = new QueryClient({
 			refetchOnWindowFocus: false,
 		},
 		mutations: {
-			retry: 1,
+			retry: 1
 		},
 	},
 });
@@ -24,7 +24,7 @@ export const trpc = createTRPCReact<AppRouter>();
 export const trpcClient = trpc.createClient({
 	links: [
 		httpBatchLink({
-			url: `${process.env.EXPO_PUBLIC_SERVER_URL}/trpc`,
+			url: `${process.env.EXPO_PUBLIC_SERVER_URL}/api/trpc`,
 			headers: () => {
 				const headers = new Map<string, string>();
 				const cookies = authClient.getCookie();
